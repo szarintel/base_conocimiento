@@ -54,5 +54,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :production do
-	gem 'sqlite3'
+	gem 'pg'
 end
