@@ -1,0 +1,31 @@
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Titulo/Descripción</th>
+
+      <th>P.claves</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articulos.each do |articulo| %>
+      <tr>
+        <td><strong><%= articulo.titulo %></strong></br>
+        <small><%= articulo.descripcion[0..250]  %>...</small></td>
+        <td><%= articulo.palabras_claves %></td>
+        <td><%= button_to 'Mostrar', articulo, :method=>:get, :class=>"btn btn-mini btn-primary" %></td>
+        <td><%= button_to 'Editar', edit_articulo_path(articulo),:method=>:get, :class=>"btn btn-mini btn-primary" %></td>
+        <td><%= button_to 'Eliminar', articulo, method: :delete, data: { confirm: 'Are you sure?' },  :class=>"btn btn-mini btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= button_to "Crear Artículo", new_articulo_path, :method=>:get, :class=>"btn btn-primary"%>
