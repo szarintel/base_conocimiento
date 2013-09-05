@@ -5,11 +5,14 @@ class ArticulosController < ApplicationController
   # GET /articulos.json
   def index
     @articulos = Articulo.all
+
   end
 
   # GET /articulos/1
   # GET /articulos/1.json
   def show
+
+   
   end
 
   # GET /articulos/new
@@ -42,7 +45,7 @@ class ArticulosController < ApplicationController
   def update
     respond_to do |format|
       if @articulo.update(articulo_params)
-        format.html { redirect_to @articulo, notice: 'Articulo was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Articulo was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +72,6 @@ class ArticulosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def articulo_params
-      params.require(:articulo).permit(:titulo, :descripcion, :palabras_claves)
+      params.require(:articulo).permit(:titulo, :descripcion, :palabras_claves,:buscar)
     end
 end

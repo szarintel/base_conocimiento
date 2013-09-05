@@ -1,6 +1,16 @@
-<h1>Editing articulo</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @articulo %> |
-<%= link_to 'Back', articulos_path %>
+<div class="row">
+	<div class="span2">
+		<h2>Editar</h2>
+		<%= button_to 'Mostrar', @articulo, :method=>:get, :class=>"btn  btn-primary"  %> 
+		<%= button_to 'Inicio', root_path, :method=>:get, :class=>"btn  btn-primary" %>
+	</div>
+	<div class="span10">
+	<%= render 'form' %>
+	</div>
+</div>
+
+
+
+

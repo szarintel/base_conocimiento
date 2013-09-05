@@ -1,4 +1,6 @@
 BaseConocimiento::Application.routes.draw do
+  #redireccionar cuando se realice una actualización
+
   resources :articulos
 
   get "home/index"

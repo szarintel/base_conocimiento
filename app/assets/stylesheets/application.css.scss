@@ -18,7 +18,18 @@ body{
 	padding-bottom: 40px;
   
 }
+.lupa{
+    background-image:url(lupa.png);
+    background-repeat:no-repeat;
+    background-size:22px 26px;
+    background-position:right; 
+}
 
+.espacio{
+    margin-top:20px;
+    margin-bottom:10px;
+
+}
 .campo_formulario{
     width: 95%;
 }
@@ -71,4 +82,9 @@ body{
     padding-left: 29px;
     padding-right: 29px;
     padding-top: 19px;
+}
+
+.form{
+    margin-bottom:0px;
+
 }

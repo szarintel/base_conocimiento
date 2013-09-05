@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 	before_action :validacion
   def index
-  	@articulos = Articulo.all
+  	@articulos = Articulo.search(params[:buscar])
   end
 
 

@@ -9,6 +9,8 @@ group :test, :development do
 	gem 'sqlite3'
 
 end
+#TinyMCE
+gem 'tinymce-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

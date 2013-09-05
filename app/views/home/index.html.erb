@@ -1,6 +1,9 @@
-<div class="row">
+
+<div class="row espacio">
 	<div class="span12">
-	Buscador	
+	<%= form_tag root_path, :method=>:get do%>
+		<%= text_field_tag :buscar, nil, placeholder: 'Búscar Documento...',:class=>"campo_formulario lupa"  %>
+	<% end %>
 	</div>
 </div>
 <div class="row">
