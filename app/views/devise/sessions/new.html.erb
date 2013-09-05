@@ -1,0 +1,35 @@
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html=> {:class =>'form-signin'}) do |f| %>
+<h2 class="form-signin-heading">Entrar</h2>
+  <div class="control-group">
+  	<%= f.label :username, "Usuario", :class=>"control-label" %>
+  	<div class="controls">
+  		<%= f.text_field :username, :autofocus => true,  :html=>{:class=>"control-label"} %>
+  	</div>
+  </div>
+
+ <div class="control-group">
+  	<%= f.label :password, :class=>"control-label" %>
+  	<div class="controls">
+  		<%= f.password_field :password,   :html=>{:class=>"control-label"} %>
+  	</div>
+  </div>
+
+
+  
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="controls">
+    <%= f.label :remember_me, :class=>"checkbox" do %>
+         Recordar
+    	<%= f.check_box :remember_me  %> 
+    <% end %>
+    
+  <% end -%>
+
+  <%= f.submit "Entrar", :class=>'btn btn-primary' %>
+<% end %>
+<!-- Enlaces para registrarse y recuperar la clave -->
+<!-- <%= render "devise/shared/links" %> -->
+</div>
+
