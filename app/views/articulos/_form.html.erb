@@ -1,3 +1,6 @@
+<div class="row espacio">
+
+<div class="span8 offset2">
 <%= form_for(@articulo) do |f| %>
   <% if @articulo.errors.any? %>
     <div id="error_explanation">
@@ -12,18 +15,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo %><br>
-    <%= f.text_field :titulo %>
+    <%= f.label :titulo,"Título" %><br>
+    <%= f.text_field :titulo,  :class=>"campo_formulario" %>
   </div>
   <div class="field">
-    <%= f.label :descripcion %><br>
-    <%= f.text_area :descripcion %>
+    <%= f.label :descripcion, "Descripción" %><br>
+    <%= f.text_area :descripcion, :class=>"campo_formulario" %>
   </div>
   <div class="field">
     <%= f.label :palabras_claves %><br>
-    <%= f.text_field :palabras_claves %>
+    <%= f.text_field :palabras_claves, :class=>"campo_formulario" %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
+</div>
