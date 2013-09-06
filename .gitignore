@@ -17,4 +17,4 @@
 
 #Ignorar secret
 
-/initializers/variable.rb
+/config/initializers/variable.rb
