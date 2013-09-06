@@ -4,7 +4,7 @@
     <tr>
     
       <th></th>
-      <th>P.claves</th>
+      
       <th>Titulo/Descripción</th>
       <th></th>
       <th></th>
@@ -19,7 +19,7 @@
           <%= link_to 'Editar', edit_articulo_path(articulo), :class=>"btn btn-mini btn-primary" %>
           <%= link_to 'Eliminar', articulo, method: :delete, data: { confirm: 'Are you sure?' },  :class=>"btn btn-mini btn-danger" %>
        </td>
-       <td><%= articulo.palabras_claves %></td>
+    
        <td><strong><%=link_to articulo.titulo, articulo %></strong></br>
       <small><%= articulo.descripcion[0..250].html_safe  %>...</small></td>
   
