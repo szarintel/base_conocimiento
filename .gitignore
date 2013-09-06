@@ -18,3 +18,4 @@
 #Ignorar secret
 
 /config/initializers/variable.rb
+/config/initializers/secret_token.rb
