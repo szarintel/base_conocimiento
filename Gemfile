@@ -12,6 +12,10 @@ end
 #TinyMCE
 gem 'tinymce-rails'
 
+
+#Paginador
+gem 'will_paginate', '~> 3.0'
+
 #Buscador
 gem 'scoped_search'
 

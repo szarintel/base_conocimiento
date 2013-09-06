@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 	before_action :validacion
 
   def index
-  	@articulos = Articulo.search_for(params[:buscar])
+  	@articulos = Articulo.search_for(params[:buscar]).paginate(:page => params[:page], :per_page => 5)
 
   end
 
