@@ -12,6 +12,12 @@
 		<div class="span4">
 			<%= image_tag "logo.png" , :alt=>"Zarintel", :class=>"img-rounded", :size=>"200x100"%>
 		</div>
+		<div class="span2 offset6">
+		<% if user_session %>
+			<%= link_to "Salir",salir_path, :class=>"btn btn-danger btn-larg" %>
+		<% end %>
+		</div>
+
 	</div>
 
 	<% if flash[:notice] %>

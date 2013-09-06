@@ -16,6 +16,11 @@ devise_scope :user do
   get '/entrar', :to => 'devise/sessions#new', :as=> :entrar
   get '/salir', :to => "devise/sessions#destroy", :as=>:salir
 end
+
+
+#Rutas Globales
+
+get '*path', to: redirect('/404.html')
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

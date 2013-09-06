@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
 	before_action :validacion
+
   def index
-  	@articulos = Articulo.search(params[:buscar])
+  	@articulos = Articulo.search_for(params[:buscar])
+
   end
 
 
@@ -12,4 +14,9 @@ class HomeController < ApplicationController
   		redirect_to entrar_path
   	 end
   end
+
+ 
+
+
+
 end

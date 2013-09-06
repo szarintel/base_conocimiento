@@ -1,20 +1,26 @@
 
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<div class="span4">
+		<p id="notice"><%= notice %></p>
+<%= link_to 'Inicio', root_path, :class=>"btn btn-primary btn-larg" %> 
+<%= link_to 'Editar', edit_articulo_path(@articulo), :class=>"btn btn-primary btn-larg" %> 
+	</div>
+</div>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @articulo.titulo %>
-</p>
+<div class="row espacio fondo-lectura">
+	<div class="span12 offset3">
+		<h2><%= @articulo.titulo %></h2>
+	</div>	
 
-<p>
-  <strong>Descripcion:</strong>
-  <%= @articulo.descripcion %>
-</p>
+</div>
+<div class="row espacio">
+	<%= @articulo.descripcion.html_safe %>
 
-<p>
-  <strong>Palabras claves:</strong>
-  <%= @articulo.palabras_claves %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_articulo_path(@articulo) %> |
-<%= link_to 'Back', articulos_path %>
+
+
+
+
+
+

@@ -12,6 +12,9 @@ end
 #TinyMCE
 gem 'tinymce-rails'
 
+#Buscador
+gem 'scoped_search'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
