@@ -1,5 +1,8 @@
 class ArticulosController < ApplicationController
   before_action :set_articulo, only: [:show, :edit, :update, :destroy]
+   before_action :validacion 
+
+
 
   # GET /articulos
   # GET /articulos.json
@@ -74,4 +77,12 @@ class ArticulosController < ApplicationController
     def articulo_params
       params.require(:articulo).permit(:titulo, :descripcion, :palabras_claves,:buscar)
     end
+
+
+
+  def validacion
+    if !user_signed_in? 
+      redirect_to entrar_path
+     end
+  end
 end
