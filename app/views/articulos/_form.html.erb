@@ -23,6 +23,12 @@
     <%= f.text_area :descripcion, :class => "tinymce", :rows => 12, :cols => 10 %>
     <%= tinymce %>
   </div>
+  
+   <div class="field">
+    <%= f.label :autor %><br>
+    <%= f.text_field :autor, :class=>"campo_formulario" %>
+  </div>
+
   <div class="field">
     <%= f.label :palabras_claves %><br>
     <%= f.text_field :palabras_claves, :class=>"campo_formulario" %>
