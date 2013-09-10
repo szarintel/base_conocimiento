@@ -68,10 +68,11 @@ class ArticulosController < ApplicationController
     respond_to do |format|
      
       if @articulo.update(articulo_params)  
-         
+         if adjunto
         File.open(Rails.root.join('public','uploads',@articulo.id.to_s,adjunto.original_filename),'wb') do |file|
             file.write(adjunto.read)
           end
+        end
      
         format.html { redirect_to root_path, notice: 'Articulo was successfully updated.' }
         format.json { head :no_content }
