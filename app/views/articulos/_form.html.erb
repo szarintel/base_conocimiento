@@ -1,7 +1,7 @@
 <div class="row espacio">
 
 
-<%= form_for(@articulo) do |f| %>
+<%= form_for(@articulo, :multipart=>true) do |f| %>
   <% if @articulo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@articulo.errors.count, "error") %> prohibited this articulo from being saved:</h2>
@@ -26,7 +26,7 @@
   
    <div class="field">
     <%= f.label :autor %><br>
-    <%= f.select :autor, options_for_select([["Alfredo García", "Alfredo García"], ["Sergio Lázaro", "Sergio Lázaro"], ["Juan Álvaro", "Juan Álvaro"], ["Alberto Cameo", "Alberto Cameo"], ["Santiago Ponce", "Santiago Ponce"]]), :selected => :autor %>
+    <%= f.select :autor, options_for_select([["Alfredo García", "Alfredo García"], ["Sergio Lázaro", "Sergio Lázaro"], ["Juan Álvaro", "Juan Álvaro"], ["Alberto Cameo", "Alberto Cameo"], ["Santiago Ponce", "Santiago Ponce"]], :selected => @articulo.autor )  %>
     
   </div>
 
@@ -34,6 +34,23 @@
     <%= f.label :palabras_claves %><br>
     <%= f.text_field :palabras_claves, :class=>"campo_formulario" %>
   </div>
+
+
+  <div class="field">
+    <%= f.label :Adjunto %><br>
+    <% if @articulo.adjunto.nil? %>
+      <%= f.file_field :adjunto, :class=>"campo_formulario" %>
+    <% else %>
+     <%= f.text_field :adjunto, :readonly=>true %>
+     <%= link_to '<i class="icon-trash"></i>'.html_safe, eliminar_path(@articulo.id), method: :delete, data: { confirm: 'Estás Seguro?' } %>
+ 
+  <% end %>
+  </div>
+
+
+
+
+     
   <div class="actions">
     <%= f.submit %>
   </div>

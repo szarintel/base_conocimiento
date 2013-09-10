@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130909075421) do
+ActiveRecord::Schema.define(version: 20130910100034) do
 
   create_table "articulos", force: true do |t|
     t.string   "titulo"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20130909075421) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "autor"
+    t.binary   "adjunto"
   end
 
   create_table "users", force: true do |t|

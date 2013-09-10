@@ -27,7 +27,15 @@
 		<%= flash[:notice] %>
 	</div>
 	</div>
-<% end %>
+	<% end %>
+	<% if flash[:alert] %>
+	<div class="row">
+	<div  class="alert alert-error fade in">
+	 <a class="close" data-dismiss="alert" href="#">&times;</a>
+		<%= flash[:alert] %>
+	</div>
+	</div>
+	<% end %>
 
 <%= yield %>
 </div>
