@@ -21,8 +21,8 @@
        </td>
     
        <td><strong><%=link_to articulo.titulo, articulo %></strong></br>
-      <small><%= articulo.descripcion[0..250].html_safe  %>...</small></td>
-  
+      <small><%= articulo.descripcion[0..250].html_safe  %>...</small></br>
+      <small>Autor: <%= articulo.autor  %></small></td>
       
       </tr>
     <% end %>

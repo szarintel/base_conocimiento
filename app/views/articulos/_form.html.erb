@@ -26,7 +26,8 @@
   
    <div class="field">
     <%= f.label :autor %><br>
-    <%= f.text_field :autor, :class=>"campo_formulario" %>
+    <%= f.select :autor, options_for_select([["Alfredo García", "Alfredo García"], ["Sergio Lázaro", "Sergio Lázaro"], ["Juan Álvaro", "Juan Álvaro"], ["Alberto Cameo", "Alberto Cameo"], ["Santiago Ponce", "Santiago Ponce"]]), :selected => :autor %>
+    
   </div>
 
   <div class="field">
