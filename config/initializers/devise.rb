@@ -189,7 +189,7 @@ Devise.setup do |config|
   
 
 
-  #config.secret_key = '7f3255280c95691a9386f4f12840d4932cb1ed8d270c0b02fcb51ae72add224ffb55499fea3e43b24f6de7107a8b8c31e8095b408f18cb3c9b6b319d0706'
+  config.secret_key = '7f3255280c95691a9386f4f12840d4932cb1ed8d270c0b02fcb51ae72add224ffb55499fea3e43b24f6de7107a8b8c31e8095b408f18cb3c9b6b319d0706'
   # Require the `devise-encryptable` gem when using anything other than bcrypt
   # config.encryptor = :sha512
 
