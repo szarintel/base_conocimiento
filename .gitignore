@@ -19,7 +19,7 @@
 
 config/initializers/variable.rb
 config/initializers/secret_token.rb
-
+config/initializers/devise.rb
 *.rbc
 *.sassc
 .sass-cache
@@ -39,3 +39,4 @@ rerun.txt
 pickle-email-*.html
 .project
 config/initializers/secret_token.rb
+/test/fixtures/*
