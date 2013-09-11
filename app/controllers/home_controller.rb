@@ -22,6 +22,8 @@ class HomeController < ApplicationController
   		articulo.adjunto = nil
 		articulo.save
   	rescue Errno::ENOENT
+  		articulo.adjunto = nil
+  		articulo.save
 	  	redirect_to edit_articulo_path(articulo.id)
 	  	flash[:alert] = "Error al borrar el fichero, puede que el archivo no exista"
 	else
