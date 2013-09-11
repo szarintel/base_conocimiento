@@ -47,7 +47,7 @@ class ArticulosController < ApplicationController
       guardar_archivo(adjunto,@articulo)
    
     end
-        format.html { redirect_to @articulo, notice: 'Articulo was successfully created.' }
+        format.html { redirect_to @articulo, notice: 'Artículo creado perfecto!' }
         format.json { render action: 'show', status: :created, location: @articulo }
 
  
@@ -77,7 +77,7 @@ class ArticulosController < ApplicationController
           end
         end
      
-        format.html { redirect_to root_path, notice: 'Articulo was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Artículo actualizado perfecto!.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
