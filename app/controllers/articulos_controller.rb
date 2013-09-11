@@ -62,18 +62,21 @@ class ArticulosController < ApplicationController
   # PATCH/PUT /articulos/1.json
   def update
     adjunto = params[:articulo][:adjunto]
-    if not @articulo.adjunto and adjunto
+    if  @articulo.adjunto.nil? and adjunto
+
      @articulo.adjunto = adjunto.original_filename
     end
     respond_to do |format|
      
       if @articulo.update(articulo_params)  
-         if  @articulo.adjunto.nil? and adjunto
+         if not @articulo.adjunto.nil? and adjunto
             if not Dir.exists?Rails.root.join('public','uploads',@articulo.id.to_s)
+
             Dir.mkdir(Rails.root.join('public','uploads',@articulo.id.to_s))
             end
             File.open(Rails.root.join('public','uploads',@articulo.id.to_s,adjunto.original_filename),'wb') do |file|
-            file.write(adjunto.read)
+          
+              file.write(adjunto.read)
           end
         end
      
