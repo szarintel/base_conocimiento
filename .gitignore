@@ -41,4 +41,4 @@ pickle-email-*.html
 .project
 config/initializers/secret_token.rb
 /test/fixtures/*
-app/assets/uploads/*
+public/uploads/*
