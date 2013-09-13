@@ -70,11 +70,11 @@ class ArticulosController < ApplicationController
      
       if @articulo.update(articulo_params)  
          if not @articulo.adjunto.nil? and adjunto
-            if not Dir.exists?Rails.root.join('public','uploads',@articulo.id.to_s)
+            if not Dir.exists?Rails.root.join('app','assets','uploads',@articulo.id.to_s)
 
-            Dir.mkdir(Rails.root.join('public','uploads',@articulo.id.to_s))
+            Dir.mkdir(Rails.root.join('app','assets','uploads',@articulo.id.to_s))
             end
-            File.open(Rails.root.join('public','uploads',@articulo.id.to_s,adjunto.original_filename),'wb') do |file|
+            File.open(Rails.root.join('app','assets','uploads',@articulo.id.to_s,adjunto.original_filename),'wb') do |file|
           
               file.write(adjunto.read)
           end
@@ -123,9 +123,9 @@ class ArticulosController < ApplicationController
 
 
   def guardar_archivo(fichero_adjunto,articulo_fila)
-    if not Dir.exists?Rails.root.join('public','uploads',articulo_fila.id.to_s)
-          Dir.mkdir(Rails.root.join('public','uploads',articulo_fila.id.to_s)) 
-          File.open(Rails.root.join('public','uploads',articulo_fila.id.to_s,fichero_adjunto.original_filename),'wb') do |file|
+    if not Dir.exists?Rails.root.join('app','assets','uploads',articulo_fila.id.to_s)
+          Dir.mkdir(Rails.root.join('app','assets','uploads',articulo_fila.id.to_s)) 
+          File.open(Rails.root.join('app','assets','uploads',articulo_fila.id.to_s,fichero_adjunto.original_filename),'wb') do |file|
             file.write(fichero_adjunto.read)
           end
     end

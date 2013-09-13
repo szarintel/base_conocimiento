@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   def bajar
 
   		articulo = Articulo.find(params[:id])
-  		send_file Rails.root.join('public','uploads',articulo.id.to_s,articulo.adjunto)
+  		send_file Rails.root.join('app','assets','uploads',articulo.id.to_s,articulo.adjunto)
   
   end
 
@@ -18,7 +18,7 @@ class HomeController < ApplicationController
   	articulo = Articulo.find(params[:id])
   	
   	begin 
-  		File.delete(Rails.root.join('public','uploads',articulo.id.to_s,articulo.adjunto))
+  		File.delete(Rails.root.join('app','assets','uploads',articulo.id.to_s,articulo.adjunto))
   		articulo.adjunto = nil
 		articulo.save
   	rescue Errno::ENOENT
