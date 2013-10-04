@@ -41,7 +41,7 @@ class ArticulosController < ApplicationController
 
     respond_to do |format|
       if @articulo.save
-        Email.index(params[:autor],params[:titulo]).delivery
+        Email.index( params[:articulo][:autor],params[:articulo][:titulo]).deliver
            #Crear directorio
     if adjunto
 
