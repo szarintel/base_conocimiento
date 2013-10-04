@@ -16,7 +16,7 @@
 /tmp
 
 #Ignorar secret
-
+config/environments/production.rb
 config/initializers/variable.rb
 config/initializers/secret_token.rb
 config/initializers/devise.rb
