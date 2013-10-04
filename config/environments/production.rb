@@ -82,7 +82,7 @@ BaseConocimiento::Application.configure do
   #Configuración de correo electrónico.
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_setting =
+  config.action_mailer.smtp_settings =
   {
     :address =>"smtp.zarintel.com",
     :port => 25,
