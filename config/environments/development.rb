@@ -36,8 +36,8 @@ BaseConocimiento::Application.configure do
     :address =>"smtp.gmail.com",
     :port => 587,
     :domain => "gmail.com",
-    :user_name => "informatica.zarintel@gmail.com",
-    :password => "ju1602che",
+    :user_name => ",
+    :password => "",
     :authentication => "plain"
   }
 end
